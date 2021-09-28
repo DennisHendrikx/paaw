@@ -1,0 +1,76 @@
+sensei:
+  engine:
+    endpoint_url: !ARG ${platform_gateway}${sensei_uri}engines
+    extra_headers:
+      Accept: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json
+  mlinstance:
+    endpoint_url: !ARG ${platform_gateway}${sensei_uri}mlInstances
+    extra_headers:
+      Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json
+      Accept: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json
+  experiment:
+    endpoint_url: !ARG ${platform_gateway}${sensei_uri}experiments
+    extra_headers:
+      Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json
+  model:
+    endpoint_url: !ARG ${platform_gateway}${sensei_uri}models
+    extra_headers: {}
+catalogservice:
+  dataset:
+    endpoint_url: !ARG ${platform_gateway}${catalogservice_uri}datasets
+    extra_headers:
+      Content-Type: application/json
+  batch:
+    endpoint_url: !ARG ${platform_gateway}${catalogservice_uri}batches
+    extra_headers:
+      Content-Type: application/json
+queryservice:
+  query:
+    endpoint_url: !ARG ${platform_gateway}${queryservice_uri}queries
+    extra_headers:
+      Content-Type: application/json
+  scheduledquery:
+    endpoint_url: !ARG ${platform_gateway}${queryservice_uri}schedules
+    extra_headers:
+      Content-Type: application/json
+segmentationservice:
+  segmentjob:
+    endpoint_url: !ARG ${platform_gateway}${segmentationservice_uri}jobs
+    extra_headers:
+      Content-Type: application/json
+schemaregistry:
+  fieldgroup:
+    endpoint_url: !ARG ${platform_gateway}${schemaregistry_uri}tenant/fieldgroups
+    extra_headers:
+      Content-Type: application/json
+      Accept: application/vnd.adobe.xed-full-desc+json; version=1
+  schema:
+    endpoint_url: !ARG ${platform_gateway}${schemaregistry_uri}tenant/schemas
+    extra_headers:
+      Content-Type: application/json
+      Accept: application/vnd.adobe.xed-full-desc+json; version=1
+  descriptor:
+    endpoint_url: !ARG ${platform_gateway}${schemaregistry_uri}tenant/descriptors
+    extra_headers:
+      Content-Type: application/json
+      Accept: application/vnd.adobe.xed-full-desc+json; version=1
+dataaccess:
+  dataaccess:
+    endpoint_url: !ARG ${platform_gateway}${dataaccess_uri}batches/
+    extra_headers:
+      Accept: application/json
+  files:
+    endpoint_url: !ARG ${platform_gateway}${dataaccess_uri}files/
+    extra_headers:
+      Accept: 'application/json, application/octet-stream'
+flowservice:
+  flow:
+    endpoint_url: !ARG ${platform_gateway}${flowservice_uri}flows/
+    extra_headers:
+      Content-Type: application/json
+      Accept: 'application/json' 
+  runs:
+    endpoint_url: !ARG ${platform_gateway}${flowservice_uri}runs/
+    extra_headers:
+      Content-Type: application/json
+      Accept: 'application/json'   

@@ -1,0 +1,8 @@
+sensei_uri: '/data/sensei/'
+catalogservice_uri: '/data/foundation/catalog/'
+dataaccess_uri: '/data/foundation/export/'
+queryservice_uri: '/data/foundation/query/'
+segmentationservice_uri : '/data/core/ups/export/'
+schemaregistry_uri: '/data/foundation/schemaregistry/'
+flowservice_uri: '/data/foundation/flowservice/'
+platform_gateway: 'https://platform.adobe.io'
