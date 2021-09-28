@@ -1,0 +1,2 @@
+include paaw/resources/known_endpoints.yaml
+include paaw/resources/endpoint_parameters.yaml
